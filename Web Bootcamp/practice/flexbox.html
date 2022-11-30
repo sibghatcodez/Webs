@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+.container{
+    height: 544px;
+    width: 100%;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+}
+.item{
+    margin: 2px;
+    padding: 2px;
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+}
+#item-1{
+    order: 2;
+    flex-grow: 4;
+    flex-shrink: 2;
+    flex-basis: 100px;
+}
+
+#item-2{
+    /* flex-shrink: 3; */
+    /* flex-grow: 1; */
+    order: 3;
+    flex: 1 1 200px;
+    align-self: flex-start;
+}
+
+#item-3{
+    flex-shrink: 4;
+    flex-grow: 3;
+    order: 1;
+    align-self: flex-end;
+}
+#item-4{
+    flex-shrink: 1;
+    flex-grow: 4;
+    order: 4;
+    align-self: flex-end;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>This is flexBoxx</h1>
+    <div class="container">
+        <div class="item" id="item-1">Pehla</div>
+        <div class="item" id="item-2">Doosra</div>
+        <div class="item" id="item-3">Teesra</div>
+        <div class="item" id="item-4">Chohta</div>
+    </div>
+</body>
+</html>

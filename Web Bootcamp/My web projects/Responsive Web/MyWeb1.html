@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rWebOne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bree+Serif&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        :root {
+            --navbar-height: 59px
+        }
+
+        /* Navigation bar */
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-family: 'Baloo Bhaijaan 2', cursive;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        #logo {
+            margin: 10px 34px;
+        }
+
+        #logo img {
+            height: 59px;
+            padding: 3px 6px;
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        /* Home Section */
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 863px;
+            top: 0px;
+            left: 0px;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            background: url('img2/spaghetti.jpg') no-repeat center center/cover;
+            height: 109.50%;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        #home h1 {
+            color: white;
+            text-align: center;
+        }
+
+        #home p {
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .h-primary {
+            font-size: 3.8rem;
+            padding: 12px;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .h-secondary {
+            font-size: 2.3rem;
+            padding: 12px;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .h1-primary {
+            text-align: center;
+            font-size: 2.8rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px white solid;
+            background-color: brown;
+            color: white;
+            margin: 17px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Services Section */
+
+        #services {
+            margin: 34px;
+            display: flex;
+        }
+
+        #services .box {
+            border: 2px solid brown;
+            padding: 34px;
+            margin: 2px 55px;
+            border-radius: 28px;
+            background: #f2f2f2;
+            margin-bottom: 20px;
+        }
+
+        #services .box img {
+            height: 160px;
+            margin: auto;
+            display: block;
+        }
+
+        #services .box p {
+            font-family: 'Bree Serif', serif;
+
+        }
+        .service-container::before{
+            content: '';
+            position: absolute;
+            background: url('img2/meat.jpg') no-repeat center center/cover;
+            height: 67.2%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        /* Client Section */
+        #client {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #client-section {
+            height: 200px;
+        }
+
+        #client-section::before {
+            content: "";
+            position: absolute;
+            background: url('img2/bg.jpeg') no-repeat center center/cover;
+            height: 200px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        .client-item img {
+            height: 80px;
+        }
+
+        .client-item {
+            padding: 34px;
+        }
+
+        /* Contact Section */
+        #contact {
+            position: relative;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            background: url('img2/contact.jpeg') no-repeat center center/cover;;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        div .center{
+            background-color: #403420;
+            color: white;
+        }
+        footer .center{
+            background-color: #000000;
+            color: white;
+            padding: 9px 20px;
+        }
+        #contact-box input,
+        #contact-box textarea{
+            width: 400px;
+            padding: 0.5rem;
+            font-size: 1.1rem;
+        } 
+        #contact-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+        #contact-box form{
+            width: 40%;
+        }
+        #contact-box label{
+            font-size: 1.3rem;
+            font-family: 'Bree Serif', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="img2/logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li class="item"><a href="">Home</a></li>
+            <li class="item"><a href="">Services</a></li>
+            <li class="item"><a href="">Our clients</a></li>
+            <li class="item"><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyOnlineMean</h1>
+        <p>Lorem temporibus quis quo deleniti ipsam tempora mollitia deserunt voluptas praesentium.</p>
+        <p>Lorem is libero perferendis laboriosam eaque veniam minima culpa debitis?</p>
+        <button class="btn">Order</button>
+    </section>
+
+    <section class="service-container">
+        <h1 class="h1-primary">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="img2/salmon.jpg" alt="Salmon">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta at quisquam, repellat
+                    molestiae.</p>
+            </div>
+            <div class="box">
+                <img src="img2/hamburger.jpg" alt="Salmon">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta at quisquam, repellat
+                    molestiae.</p>
+            </div>
+            <div class="box">
+                <img src="img2/meat.jpg" alt="Salmon">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta at quisquam, repellat
+                    molestiae.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="client-section">
+        <h1 class="h1-primary">Our Clients</h1>
+        <div id="client">
+            <div class="client-item">
+                <img src="img2/fb.png" alt="Facebook">
+            </div>
+            <div class="client-item">
+                <img src="img2/insta.png" alt="Instagram">
+            </div>
+            <div class="client-item">
+                <img src="img2/twit.png" alt="Twitter">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h1-primary">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name:</label> <input type="text" name="" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email:</label> <input type="email" name="" id="Email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="Phone number">Phone:</label><input type="email" name="" id="Phone number" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="Message">Message:</label>
+                    <br><textarea name="" id="Message" cols="30" rows="10" placeholder="Write Something..."></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.MyOnlineMeal.com. All rights reserved. 
+        </div>
+    </footer>
+</body>
+
+</html>
